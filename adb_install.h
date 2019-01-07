@@ -17,6 +17,9 @@
 #ifndef _ADB_INSTALL_H
 #define _ADB_INSTALL_H
 
-int apply_from_adb(bool* wipe_cache, const char* install_file);
+void sideload_start();
+void sideload_wait(bool cancel);
+int  sideload_install(bool* wipe_cache, const char* install_file, bool verify);
+void sideload_stop();
 
 #endif
